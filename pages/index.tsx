@@ -20,11 +20,11 @@ const Home: NextPage = () => {
       </Head>
       <div className="max-w-2xl mx-auto">
         <header className="fixed top-0 z-10">
-          <div className="flex bg-white dark:bg-gray-700 px-4 py-5 h-auto w-full max-w-2xl rounded-lg border-solid border-gray-200 dark:border-gray-500 border-b-1 border-4 border-t-0 border-l-0 border-r-0">
+          <div className="flex bg-gray-50 dark:bg-gray-700 px-4 py-5 h-auto w-full max-w-2xl rounded-lg border-solid border-gray-200 dark:border-gray-500 border-b-1 border-4 border-t-0 border-l-0 border-r-0">
             <div
               style={{
                 boxShadow: `${
-                  theme === "dark" ? "#384152" : "white"
+                  theme === "dark" ? "#384152" : "#f0fafb"
                 } 0px 0px 0px 2px, ${
                   color?.name ?? "lightgray"
                 } 0px 0px 0px 4px`,
@@ -77,7 +77,7 @@ const Home: NextPage = () => {
                 key={el.id}
                 style={{ backgroundColor: el.name }}
                 onClick={() => setColor(el)}
-                className={`w-12 h-12 focus:outline-none rounded-lg flex-shrink-0 ring-gray-100 dark:ring-gray-500 dark:ring-offset-gray-800 my-3 mx-2 transform hover:scale-125 transition duration-500 ease-in-out ${
+                className={`w-12 h-12 focus:outline-none rounded-lg flex-shrink-0 ring-gray-100 dark:ring-gray-500 ring-offset-gray-50 dark:ring-offset-gray-800 my-3 mx-2 transform hover:scale-125 transition duration-500 ease-in-out ${
                   el.id === color?.id
                     ? "scale-110 ring-4 ring-offset-0"
                     : "ring-2 ring-offset-2"
