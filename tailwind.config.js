@@ -1,8 +1,14 @@
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
 module.exports = {
   purge: ['./pages/**/*.tsx', './src/**/*.tsx'],
-  darkMode: 'media', // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['"Nunito VF Beta"', ...fontFamily.sans]
+      },
+    },
   },
   variants: {
     extend: {},
